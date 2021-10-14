@@ -1,0 +1,130 @@
+@import "variables";
+@import "bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@font-face {
+	font-family: 'DCC Cloud';
+	src: url('../fonts/dcc-cloud.otf');
+}
+
+#app {
+	@extend .d-flex;
+
+	height: 100vh;
+}
+
+.wrapper {
+	@extend .d-flex, .flex-row, .flex-nowrap, .w-100;
+	
+	.sidenav {
+		@extend .d-flex, .flex-column, .flex-shrink-0, .p-0, .bg-light;
+
+		width: 300px;
+		box-shadow: 5px 0 10px rgba(black, .05);
+
+		@include media-breakpoint-down(md) {
+			width: 80px;
+		}
+
+		.logo {
+			@extend .d-flex, .justify-content-center, .align-items-center, .mb-3, .mb-md-0, .me-md-auto, .link-dark, .text-decoration-none, .w-100, .text-white;
+
+			background: #67BDFF;
+			height: 60px;
+			font-family: 'DCC Cloud';
+			font-size: 36px;
+			text-shadow: 0 3px 3px rgba(black, .05);
+			transition: background .2s;
+
+			&:hover {
+				background: #58ADEE;
+			}
+		}
+
+		.nav {
+			@extend .px-3, .pt-0, .py-md-3;
+
+			background: #ECF7FE;
+
+			.nav-item {
+				@extend .mb-3;
+
+				.nav-link {
+					@extend .bg-white, .rounded, .text-dark, .d-flex, .align-items-center;
+
+					height: 50px;
+					transition: transform .2s, background .2s, color .2s;
+
+					@include media-breakpoint-down(md) {
+						height: 48px;
+					}
+
+					.nav-link-text {
+						@extend .d-none, .d-md-inline;
+					}
+
+					i.bi {
+						@extend .me-md-3;
+
+						color: #67BDFF;
+					}
+
+					&.active,
+					&:hover {
+						@extend .text-white;
+
+						background: #67BDFF!important;
+
+						i.bi {
+							@extend .text-white;
+						}
+					}
+				}
+
+				&.user-link {
+					@extend .mb-0;
+
+					.nav-link {
+						background: transparent!important;
+
+						&:hover {
+							color: #58ADEE!important;
+
+							i.bi {
+								color: #67BDFF!important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.content {
+		@extend .w-100;
+
+		height: 100vh;
+		display: grid;
+		grid-template-rows: 60px 1fr;
+
+		.navbar {
+			@extend .p-0;
+			
+			background: #67BDFF;
+
+			.navbar-nav {
+				height: 60px;
+
+				.nav-item {
+					@extend .px-2;
+
+					.nav-link {
+						@extend .d-flex, .align-items-center;
+
+						height: 60px;
+					}
+				}
+			}
+		}
+	}
+}
