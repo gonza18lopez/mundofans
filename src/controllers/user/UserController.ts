@@ -1,7 +1,18 @@
-import { Request, Response } from "express";
+import { Request, Response } from "express"
 import UserService from '@services/UserService'
 
-export default {
+class UserController {
+    /**
+     * User controller constructor
+     * 
+     * @param req Request
+     * @param res Response
+     * @returns 
+     */
+    constructor() {
+        // 
+    }
+
     /**
      * Get all users
      * 
@@ -19,3 +30,5 @@ export default {
         return res.json(users)
     }
 }
+
+export default new UserController()

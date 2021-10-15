@@ -1,6 +1,6 @@
-import { Request, Response } from "express";
+import { Request, Response } from "express"
 
-export default {
+class ApplicationController {
     /**
      * The application root path
      * 
@@ -16,3 +16,5 @@ export default {
         }
     }
 }
+
+export default new ApplicationController()
