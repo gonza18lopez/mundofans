@@ -11,7 +11,8 @@
         "paths": {
             "@controllers/*": ["controllers/*"],
             "@models/*": ["models/*"],
-            "@services/*": ["services/*"]
+            "@services/*": ["services/*"],
+            "@adapters/*": ["services/adapters/*"]
         },
     },
     "lib": ["es2015"]
