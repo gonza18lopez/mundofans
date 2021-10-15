@@ -1,4 +1,6 @@
 import { Request, Response } from "express";
+import { getRepository } from "typeorm";
+import { User } from '@models/User';
 
 export default {
     /**
@@ -8,9 +10,13 @@ export default {
      * @param res Response
      * @returns Pug
      */
-    index(req: Request, res: Response) {
-        return res.json({
-            message: 'View all users'
-        })
+    async index(req: Request, res: Response) {
+        // get repository
+        const repository = getRepository(User)
+
+        // get users
+        const users = await repository.find()
+
+        return res.json(users)
     }
 }

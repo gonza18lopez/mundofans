@@ -11,7 +11,7 @@ export class User {
 	@Column('varchar', { unique: true })
 	public email: String;
 
-	@Column('varchar', { length: 255 })
+	@Column('varchar', { length: 255, select: false })
 	public password: String;
 
 	@CreateDateColumn({ type: 'timestamp', default: () => "CURRENT_TIMESTAMP(6)" })

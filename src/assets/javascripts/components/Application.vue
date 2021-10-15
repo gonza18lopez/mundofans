@@ -95,6 +95,16 @@
 
 <script>
 export default {
-	name: 'application'
+	name: 'application',
+
+	watch: {
+		$route: {
+			handler(to, from) {
+				document.title = to.meta.title || process.env.MIX_APP_NAME
+			},
+
+			inmediate: true
+		}
+	}
 }
 </script>
