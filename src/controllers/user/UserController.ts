@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
-import { getRepository } from "typeorm";
-import { User } from '@models/User';
+import UserService from '@services/UserService'
 
 export default {
     /**
@@ -11,11 +10,11 @@ export default {
      * @returns Pug
      */
     async index(req: Request, res: Response) {
-        // get repository
-        const repository = getRepository(User)
+        // create service instance
+        const service = new UserService()
 
-        // get users
-        const users = await repository.find()
+        // get all users
+        const users = await service.getAll()
 
         return res.json(users)
     }

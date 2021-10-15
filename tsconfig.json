@@ -10,7 +10,8 @@
         "baseUrl": "./src",
         "paths": {
             "@controllers/*": ["controllers/*"],
-            "@models/*": ["models/*"]
+            "@models/*": ["models/*"],
+            "@services/*": ["services/*"]
         },
     },
     "lib": ["es2015"]
