@@ -10,6 +10,33 @@ const router = createRouter({
             meta: {
                 title: 'MundoFans - Home'
             }
+        },
+
+        {
+            path: '/community',
+            name: 'community',
+            component: () => import('../views/Community.vue'),
+            meta: {
+                title: 'MundoFans - Community'
+            }
+        },
+
+        {
+            path: '/shop',
+            name: 'shop',
+            component: () => import('../views/Shop.vue'),
+            meta: {
+                title: 'MundoFans - Shop'
+            }
+        },
+
+        {
+            path: '/explore',
+            name: 'explore',
+            component: () => import('../views/Explore.vue'),
+            meta: {
+                title: 'MundoFans - Explore'
+            }
         }
     ],
     linkActiveClass: 'active',

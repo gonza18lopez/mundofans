@@ -18,7 +18,7 @@
 				</li>
 
 				<li class="nav-item">
-					<router-link to="/community" class="nav-link">
+					<router-link :to="{ name: 'community' }" class="nav-link">
 						<i class="bi bi-laptop"></i>
 
 						<span class="nav-link-text">
@@ -28,7 +28,7 @@
 				</li>
 
 				<li class="nav-item">
-					<router-link to="/shop" class="nav-link">
+					<router-link :to="{ name: 'shop' }" class="nav-link">
 						<i class="bi bi-cart"></i>
 
 						<span class="nav-link-text">
@@ -38,7 +38,7 @@
 				</li>
 
 				<li class="nav-item">
-					<router-link to="/explore" class="nav-link">
+					<router-link :to="{ name: 'explore' }" class="nav-link">
 						<i class="bi bi-binoculars"></i>
 
 						<span class="nav-link-text">
