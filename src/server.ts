@@ -1,7 +1,9 @@
 import 'reflect-metadata'
+import 'module-alias/register';
 
 import dotenv from 'dotenv'
 import express from 'express'
+import history from 'connect-history-api-fallback'
 import path from 'path'
 import http from 'http'
 import favicon from 'serve-favicon'
@@ -12,6 +14,7 @@ import bodyParser from 'body-parser'
 import errorHandler from 'errorhandler'
 import { Server, Socket } from "socket.io"
 import * as database from './database'
+import routes from './routes'
 
 /**
  * Import environment settings
@@ -79,13 +82,20 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, 'public')))
 
 /**
- * Test route
- * 
- * @method GET
+ * Development only
  */
-app.get('/*', (req, res) => {
-    res.render('application')
-})
+if ('development' == app.get('env'))
+    app.use(errorHandler());
+
+/**
+ * Get application routes
+ */
+app.use(routes)
+
+/**
+ * Support history mode for Vue
+ */
+app.use(history())
 
 /**
  * Start server listening
