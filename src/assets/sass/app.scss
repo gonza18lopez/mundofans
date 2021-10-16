@@ -2,6 +2,9 @@
 @import "bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
+// Components
+@import "./components/feature_box";
+
 @font-face {
 	font-family: 'DCC Cloud';
 	src: url('../fonts/dcc-cloud.otf');

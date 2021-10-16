@@ -35,6 +35,7 @@
     "resolve-url-loader": "^4.0.0",
     "sass": "^1.43.2",
     "sass-loader": "^12.1.0",
+    "ts-loader": "^9.2.6",
     "ts-node": "^10.3.0",
     "tslint": "^6.1.3",
     "typescript": "^4.4.4",
@@ -63,11 +64,13 @@
     "socket.io-client": "^4.2.0",
     "typeorm": "^0.2.38",
     "vue": "^3.2.20",
-    "vue-router": "^4.0.11"
+    "vue-router": "^4.0.11",
+    "vuex": "^4.0.2"
   },
   "_moduleAliases": {
+    "@assets": "src/assets",
     "@controllers": "src/controllers",
-    "@middlewares": ["middlewares"],
+    "@middlewares": "src/middlewares",
     "@models": "src/models",
     "@services": "src/services",
     "@adapters": "src/services/adapters"

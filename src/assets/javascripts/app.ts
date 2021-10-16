@@ -3,6 +3,7 @@ require('./bootstrap');
 import { io } from 'socket.io-client'
 import { createApp } from 'vue'
 import router from './routes'
+import store from './store'
 import App from './components/Application.vue'
 
 /**
@@ -17,7 +18,10 @@ const socket = io('http://localhost', {
  */
 const app = createApp(App)
 
-// mount app
+/**
+ * Mount Vue Application
+ */
 app
+    .use(store)
     .use(router)
     .mount('#app')

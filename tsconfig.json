@@ -9,6 +9,7 @@
         "outDir": "dist",
         "baseUrl": "./src",
         "paths": {
+            "@assets/*": ["assets/*"],
             "@controllers/*": ["controllers/*"],
             "@middlewares/*": ["middlewares/*"],
             "@models/*": ["models/*"],

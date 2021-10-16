@@ -93,18 +93,10 @@
 	</div>
 </template>
 
-<script>
-export default {
-	name: 'application',
+<script lang="ts">
+import { defineComponent } from 'vue'
 
-	watch: {
-		$route: {
-			handler(to, from) {
-				document.title = to.meta.title || process.env.MIX_APP_NAME
-			},
-
-			inmediate: true
-		}
-	}
-}
+export default defineComponent({
+	name: 'App'
+})
 </script>

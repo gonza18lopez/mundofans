@@ -6,8 +6,10 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: 'community'
-}
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+    name: 'Community'
+})
 </script>
