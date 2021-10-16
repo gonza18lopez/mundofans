@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/server.ts",
+    "dev": "nodemon --exec npm start",
     "mix": "npx mix",
     "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js",
     "make:model": "npm run typeorm entity:create -- --name",
@@ -21,6 +22,7 @@
     "@vue/compiler-sfc": "^3.2.20",
     "coffee-loader": "^3.0.0",
     "coffeescript": "^2.6.1",
+    "kill-port": "^1.6.1",
     "laravel-mix": "^6.0.34",
     "nodemon": "^2.0.13",
     "resolve-url-loader": "^4.0.0",
