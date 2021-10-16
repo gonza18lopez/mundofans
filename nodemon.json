@@ -1,0 +1,12 @@
+{
+    "ignore": [
+        "src/test/*",
+        "src/assets/*",
+        "src/public/*",
+        ".gitignore",
+        ".env.example",
+        "tsconfig.json",
+        "tslint.json",
+        "webpack.mix.js"
+    ]
+}
