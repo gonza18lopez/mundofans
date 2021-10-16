@@ -63,6 +63,7 @@ io.on('connection', (socket: Socket) => {
  * Set application settings
  */
 app.set('port', process.env.SERVER_PORT || 80)
+app.set('host', process.env.SERVER_HOST || 'localhost')
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
 
@@ -100,4 +101,4 @@ app.use(history())
 /**
  * Start server listening
  */
-server.listen(app.get('port'), () => console.log(`[HTTP] Web server listening on port ${app.get('port')}`))
+server.listen(app.get('port'), app.get('host'), () => console.log(`[HTTP] Web server listening on port ${app.get('port')}`))
