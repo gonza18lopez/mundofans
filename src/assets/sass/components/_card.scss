@@ -1,0 +1,18 @@
+.card {
+	@extend .border-0, .py-2;
+
+	border-radius: .5rem;
+	
+	.card-header {
+		@extend .border-bottom-0;
+
+		background: transparent;
+
+		.card-title {
+			@extend .d-flex, .py-3, .px-4, .mb-0;
+
+			background: rgba(white, .25);
+			border-radius: .5rem;
+		}
+	}
+}
